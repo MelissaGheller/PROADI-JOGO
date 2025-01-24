@@ -26,9 +26,7 @@ for (let i = 1; i <= 30; i++) {
 for (let i = 1; i <= 30; i++) {
   casas.push({
     titulo: `Tá certo isso? ${i}`,
-    conteudo: `Texto explicativo para "Tá certo isso? ${i}".`,
-    tipo: "pergunta", // Tipo adicionado para definir que é uma pergunta
-    resposta: true // Resposta correta adicionada
+    conteudo: `Texto explicativo para "Tá certo isso? ${i}".`
   });
 }
 
@@ -37,13 +35,11 @@ const tituloEl = document.getElementById("titulo");
 const conteudoEl = document.getElementById("conteudo");
 const botoesPergunta = document.getElementById("botoes-pergunta");
 const videoArea = document.getElementById("video-area");
+const playVideoButton = document.getElementById("play-video");
 const resultadoEl = document.getElementById("resultado");
 
 document.querySelectorAll(".casinha").forEach((casinha, index) => {
-  casinha.addEventListener("click", () => {
-    botoesPergunta.dataset.index = index;  // Configura o índice
-    abrirCarta(index);
-  });
+  casinha.addEventListener("click", () => abrirCarta(index));
 });
 
 function abrirCarta(index) {
@@ -53,6 +49,7 @@ function abrirCarta(index) {
 
   if (casa.video) {
     videoArea.style.display = "block";
+    playVideoButton.onclick = () => alert("Aqui você pode inserir o vídeo manualmente!");
   } else {
     videoArea.style.display = "none";
   }
