@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f5f9;
+}
+
+.trilha {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.casinha {
+  width: 100px;
+  height: 100px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.casinha:hover {
+  transform: scale(1.1);
+  background-color: #45a049;
+}
+
+.carta {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.carta h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.carta p {
+  font-size: 14px;
+}
+
+.carta button {
+  padding: 10px;
+  background-color: #0072BB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.carta button:hover {
+  background-color: #005A93;
+}
+
+.carta .fechar {
+  background-color: #666;
+}
+
+.carta .fechar:hover {
+  background-color: #444;
+}
+
+.resultado {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.resultado.sucesso {
+  color: green;
+}
+
+.resultado.erro {
+  color: red;
+}
