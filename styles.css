@@ -7,46 +7,114 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f0f5f9;
+  background-color: #000000;
 }
-
+#tituloDiv{
+  margin-top: 50px;
+}
+#tituloJOGO{
+  color: #45a049;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 .trilha {
   display: grid;
-  grid-template-columns: repeat(5, 100px);
-  gap: 10px;
+  color: rgb(0, 0, 0);
+  grid-template-columns: repeat(5, 90px);
+  gap: 5px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-}
+  margin: 0px;
+  margin-bottom: 30px;
 
+  
+}
+.casaVazia{
+  background-color: #000000;
+  color: #ffffff;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin: 0px;
+}
 .casinha {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  background-color: #80c3de;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin: 0px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+.casinha:hover {
+  transform: scale(1.1);
+  background-color: #80c3ded8;
+}
+.casinhaPergunta{
+  width: 80px;
+  height: 80px;
   background-color: #4CAF50;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   text-align: center;
   padding: 5px;
+  margin: 0px;
+  transition: transform 0.3s, background-color 0.3s;
+
+}
+.casinhaPergunta:hover {
+  transform: scale(1.1);
+  background-color: #4caf4fb1;
+}
+
+.casinhaSimulacao{
+  width: 80px;
+  height: 80px;
+  background-color: #6c61a1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin: 0px;
+  
   transition: transform 0.3s, background-color 0.3s;
 }
-
-.casinha:hover {
+.casinhaSimulacao:hover {
   transform: scale(1.1);
-  background-color: #45a049;
+  background-color: #6c61a1bc;
 }
-
 .carta {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 60%;
+  height: 60%;
   background: white;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

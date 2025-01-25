@@ -8,44 +8,95 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <div id="titulodiv">
+    <h1 id="tituloJOGO" >Jogo PROADI-SUS</h1>
+  </div>
   <div class="trilha">
+    
     <div class="casinha" data-index="0">Projeto Estagiários</div>
-    <div class="casinha" data-index="1">PROADI</div>
+    <div class="casinha" data-index="1">PROADI 1</div>
     <div class="casinha" data-index="2">Hospital Moinhos de Vento</div>
     <div class="casinha" data-index="3">PROADI + HMV</div>
-    <div class="casinha" data-index="4">Administrativo 1</div>
-    <div class="casinha" data-index="5">Administrativo 2</div>
-    <div class="casinha" data-index="6">Administrativo 3</div>
-    <div class="casinha" data-index="7">Administrativo 4</div>
-    <div class="casinha" data-index="8">PROADI</div>
-    <div class="casinha" data-index="9">Simulação 1</div>
-    <div class="casinha" data-index="10">Simulação 2</div>
-    <div class="casinha" data-index="11">Simulação 3</div>
+    <div class="casinha" data-index="4">Adm 1</div>
+   
+    <div class="casaVazia" data-index="100"></div>
+    <div class="casaVazia" data-index="100"></div>
+    <div class="casaVazia" data-index="100"></div>
+    <div class="casaVazia" data-index="100"></div>
 
-    <!-- Casas de Projetos -->
-    <!-- As casas de Projeto 1 a 30 -->
-    <div class="casinha" data-index="12">Projeto 1</div>
-    <div class="casinha" data-index="13">Projeto 2</div>
-    <!-- Continue para até Projeto 30 -->
-    <div class="casinha" data-index="41">Projeto 30</div>
 
-    <!-- Casas de "Tá certo isso?" -->
-    <!-- As casas de "Tá certo isso?" 1 a 30 -->
-    <div class="casinha" data-index="42">Tá certo isso? 1</div>
-    <div class="casinha" data-index="43">Tá certo isso? 2</div>
-    <!-- Continue para até "Tá certo isso?" 30 -->
-    <div class="casinha" data-index="71">Tá certo isso? 30</div>
+    <div class="casinha" data-index="5">Adm 2</div>
+    <div class="casinha" data-index="6">Simulação - parte 2</div>
+    <div class="casinha" data-index="7">Simulação -  parte 1</div>
+
+        <!-- Casinhas simulaçaõ -->
+    <div class="casinha" data-index="8">Projetos PROADI</div>
+    <div class="casinha" data-index="9">Adm 4</div>
+    <div class="casinha" data-index="10">Adm 3</div>
+    <div class="casinha" data-index="11">Simulação - parte 3</div>
+
+    <div class="casaVazia" data-index="100"></div>
+    <div class="casaVazia" data-index="100"></div>
+    <div class="casaVazia" data-index="100"></div>
+    <div class="casaVazia" data-index="100"></div>
+
+    <!-- Casinhas intercaladas entre Projetos e Tá certo isso? -->
+    <script>
+      let count = 0; // Contador para casas com texto
+    
+      for (let i = 1; i <= 200; i++) {
+        // Alterna entre "Projeto" e "Tá certo isso?"
+        if (count < 5 ) {
+          if (i % 2 !== 0) {
+            document.write(`<div class="casinha" data-index="${i}">Projeto ${count}</div>`);
+          } else {
+            document.write(`<div class="casinhaPergunta" data-index="${i}">Tá certo isso? ${count}</div>`);
+            
+          }
+          count++;
+        }
+    
+        // Insere 4 casas vazias após 5 casas com texto
+        if (count === 5) {
+          for (let j = 0; j <= 3; j++) {
+            document.write(`<div class="casaVazia" data-index="${i + j + 1}">${count}</div>`);
+            count++;
+          }
+          
+        }
+        if (count > 8 && count <16) {
+          if (i % 2 !== 0) {
+            document.write(`<div class="casinhaPergunta" data-index="${i}">Tá certo isso? ${count}</div>`);
+          } else {
+            document.write(`<div class="casinha" data-index="${i}">Projeto${count}</div>`);
+          }
+          count++; 
+        }
+        
+        if (count ===16) {
+          for (let j = 0; j < 4; j++) {
+            document.write(`<div class="casaVazia" data-index="${i + j + 1}">${count}</div>`);
+            count++;
+          }
+        }
+        
+        if (count ===20) {
+          document.write(`<div class="casinha" data-index="${i}">Projeto${count}</div>`);
+          count = 1;
+        }   
+      }
+    </script>
   </div>
 
   <div class="carta" id="carta">
     <h2 id="titulo">Título</h2>
     <p id="conteudo">Conteúdo aqui</p>
-    <div id="video-area" style="display: none;">
-      <button id="play-video">Abrir vídeo</button>
-    </div>
     <div id="botoes-pergunta" style="display: none;">
       <button onclick="responder(true)">Verdadeiro</button>
       <button onclick="responder(false)">Falso</button>
+    </div>
+    <div id="video-area" style="display: none;">
+      <button>Adicionar vídeo aqui</button>
     </div>
     <button class="fechar" onclick="fecharCarta()">Fechar</button>
   </div>
