@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trilha de Conhecimento - PROADI-SUS</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/CSS/styles.css">
+  <link rel="stylesheet" href="/CSS/telagrande.css">
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -13,79 +14,128 @@
   </div>
   <div class="trilha">
     
-    <div class="casinha" data-index="0">Projeto Estagiários</div>
-    <div class="casinha" data-index="1">PROADI 1</div>
-    <div class="casinha" data-index="2">Hospital Moinhos de Vento</div>
-    <div class="casinha" data-index="3">PROADI + HMV</div>
-    <div class="casinha" data-index="4">Adm 1</div>
+    <div class=" casa casinha" data-index="0">Projeto Estagiários</div>
+    <div class=" casa casinha" data-index="1">PROADI 1</div>
+    <div class=" casa casinha" data-index="2">Hospital Moinhos de Vento</div>
+    <div class=" casa casinha" data-index="3">PROADI + HMV</div>
+    <div class=" casa casinha" data-index="4">Adm 1</div>
    
-    <div class="casaVazia" data-index="100"></div>
-    <div class="casaVazia" data-index="100"></div>
-    <div class="casaVazia" data-index="100"></div>
-    <div class="casaVazia" data-index="100"></div>
+    <div class=" casa casaVazia" data-index="100"></div>
+    <div class=" casa casaVazia" data-index="100"></div>
+    <div class=" casa casaVazia" data-index="100"></div>
+    <div class=" casa casaVazia" data-index="100"></div>
 
 
-    <div class="casinha" data-index="5">Adm 2</div>
-    <div class="casinha" data-index="6">Simulação - parte 2</div>
-    <div class="casinha" data-index="7">Simulação -  parte 1</div>
+    <div class="casa casinha" data-index="5">Adm 2</div>
+    <div class="casa casinha" data-index="6">Simulação - parte 2</div>
+    <div class="casa casinha" data-index="7">Simulação -  parte 1</div>
 
-        <!-- Casinhas simulaçaõ -->
-    <div class="casinha" data-index="8">Projetos PROADI</div>
-    <div class="casinha" data-index="9">Adm 4</div>
-    <div class="casinha" data-index="10">Adm 3</div>
-    <div class="casinha" data-index="11">Simulação - parte 3</div>
+      
+    <div class="casa casinha" data-index="8">Projetos PROADI</div>
+    <div class="casa casinha" data-index="9">Adm 4</div>
+    <div class="casa casinha" data-index="10">Adm 3</div>
+    <div class="casa casinha" data-index="11">Simulação - parte 3</div>
 
-    <div class="casaVazia" data-index="100"></div>
-    <div class="casaVazia" data-index="100"></div>
-    <div class="casaVazia" data-index="100"></div>
-    <div class="casaVazia" data-index="100"></div>
+    <div class="casa casaVazia" data-index="100"></div>
+    <div class="casa casaVazia" data-index="100"></div>
+    <div class="casa casaVazia" data-index="100"></div>
+    <div class="casa casaVazia" data-index="100"></div>
 
     <!-- Casinhas intercaladas entre Projetos e Tá certo isso? -->
-    <script>
-      let count = 0; // Contador para casas com texto
-    
-      for (let i = 1; i <= 200; i++) {
-        // Alterna entre "Projeto" e "Tá certo isso?"
-        if (count < 5 ) {
-          if (i % 2 !== 0) {
-            document.write(`<div class="casinha" data-index="${i}">Projeto ${count}</div>`);
-          } else {
-            document.write(`<div class="casinhaPergunta" data-index="${i}">Tá certo isso? ${count}</div>`);
-            
-          }
-          count++;
-        }
-    
-        // Insere 4 casas vazias após 5 casas com texto
-        if (count === 5) {
-          for (let j = 0; j <= 3; j++) {
-            document.write(`<div class="casaVazia" data-index="${i + j + 1}">${count}</div>`);
-            count++;
-          }
-          
-        }
-        if (count > 8 && count <16) {
-          if (i % 2 !== 0) {
-            document.write(`<div class="casinhaPergunta" data-index="${i}">Tá certo isso? ${count}</div>`);
-          } else {
-            document.write(`<div class="casinha" data-index="${i}">Projeto${count}</div>`);
-          }
-          count++; 
-        }
-        
-        if (count ===16) {
-          for (let j = 0; j < 4; j++) {
-            document.write(`<div class="casaVazia" data-index="${i + j + 1}">${count}</div>`);
-            count++;
-          }
-        }
-        
-        if (count ===20) {
-          document.write(`<div class="casinha" data-index="${i}">Projeto${count}</div>`);
-          count = 1;
-        }   
-      }
-    </script>
+
+    <div class="casa casinhaProjeto gestao"  data-index="12"> Progeto Gestão Hospitalar RS</div>
+    <div class=" casa casinhaPergunta gestao"   class="gestao" data-index="13">?</div>
+    <div class=" casa casinhaProjeto gestao"  data-index="13">Projeto Lean</div>
+    <div class=" casa casinhaPergunta gestao"   data-index="14">?</div>
+    <div class="casa casinhaProjeto gestao"  data-index="15"> Projeto RHP</div>
+   
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+
+    <div class="casa casinhaPergunta gestao" data-index="16">?</div>
+    <div class="casa casinhaProjeto gestao"  data-index="17">Projeto Saúde em nossas Mãos </div> 
+    <div class="casa casinhaPergunta gestao" data-index="18">?</div>
+    <div class="casa casinhaProjeto gestao"  data-index="19">Projeto ATS Educação</div>
+    <div class="casa casinhaPergunta gestao"   data-index="20">?</div>
+    <div class="casa casinhaProjeto gestao"  data-index="21">Projeto Preceptoria Médica</div>
+    <div class="casa casinhaPergunta gestao" data-index="22">?</div>
+   
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+
+    <div class="casa casinhaProjeto educacao"  data-index="23">Projeto Preceptoria MFC</div>
+    <div class="casa casinhaPergunta educacao" data-index="24">?</div>
+    <div class="casa casinhaProjeto educacao"  data-index="25">Projeto Preceptoria Multiprofissional</div>
+    <div class="casa casinhaPergunta educacao" data-index="26">?</div>
+    <div class="casa casinhaProjeto educacao"  data-index="27">Projeto Saúde Indígena</div>
+
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+
+    <div class="casa casinhaPergunta educacao" data-index="28">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="29">Projeto Artemis</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="30">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="31">Projeto Diretrizes</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="32">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="33">Projeto Estudo CuidAR</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="34">?</div>
+
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+
+  
+    <div class="casa casinhaProjeto pesquisa"  data-index="35">Estudo HTLV (PRISMA)</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="36">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="37">Projeto Estudo Otimo</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="38">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="39">Projeto Onco-Genomas Brasil</div>
+
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+
+    <div class="casa casinhaPergunta pesquisa" data-index="40">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="41">Projeto PhysioSync-HF Follow-UP</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="42">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="45">Projeto Pós Covid Brasil</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="46">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="47">Projeto PROMOTE</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="48">?</div>
+
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+
+
+    <div class="casa casinhaProjeto pesquisa"  data-index="49">Projeto Rehab-VM Brasil</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="50">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="51">Projeto Resilient-TNK</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="52">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="53">Projeto TB PED</div>
+
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+    <div class="casa casaVazia" data-index="0"></div>
+
+
+    <div class="casa casinhaPergunta pesquisa" data-index="54">?</div>
+    <div class="casa casinhaProjeto saudeDigital"  data-index="59">Projeto Tele nordeste</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="56">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="57">Projeto VigiaSUS</div>
+    <div class="casa casinhaPergunta pesquisa" data-index="58">?</div>
+    <div class="casa casinhaProjeto pesquisa"  data-index="55">Projeto Trident</div>
+    <div class="casa casinhaPergunta saudeDigital" data-index="60">?</div>
   </div>
 
   <div class="carta" id="carta">

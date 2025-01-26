@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px){
+
+    #tituloDiv{
+        
+        background-color: #45a049;
+      }
+      #tituloJOGO{
+        margin: 50px;
+        padding: 10px;
+        color: #000000;
+        background-color: #45a049;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-style: oblique;
+      }
+    .trilha{
+        grid-template-columns: repeat(5, 230px);
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .casa{
+        width: 200px;
+        height: 200px;
+        color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style:italic;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+    
+
+
+}
