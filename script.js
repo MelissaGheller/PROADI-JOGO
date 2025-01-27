@@ -1,7 +1,7 @@
 const casas = [
   // Casinhas gerais
-  /*0*/ { titulo: "Projeto Estagiários", conteudo: "Esse é um projeto dos estagiários do Hospital Moinhos de Vento que trabalham na área do PROADI.", tipo: "descricao" },
-  /*1*/ { titulo: "PROADI 1", conteudo: "Texto sobre o que é o PROADI 1.", tipo: "descricao" },
+  /*0*/ { titulo: "Projeto Estagiários", conteudo: "Esse é um projeto sobre o setor PROADI realizado pelos estagiarios do Hospital Moinhos Vento, tendo como objetivo mostrar sobre o PROADI e seus projetos em conjunto com o HMV." , tipo: "integrantes"},
+  /*1*/ { titulo: "PROADI 1", conteudo: "O Programa de Apoio ao Desenvolvimento Institucional do Sistema Único de Saúde (PROADI-SUS) é uma aliança entre seis hospitais de referência no Brasil e o Ministério da Saúde. Criado em 2009, seu propósito é apoiar e aprimorar o SUS por meio de projetos de capacitação de recursos humanos, pesquisa, avaliação e incorporação de tecnologias, gestão e assistência especializada demandados pelo Ministério da Saúde.Esse é um projeto dos estagiários do Hospital Moinhos de Vento que trabalham na área do PROADI.", tipo: "descricao" },
   /*2*/ { titulo: "Hospital Moinhos de Vento", conteudo: "Texto sobre o Hospital Moinhos de Vento.", tipo: "descricao" }, 
   /*3*/ { titulo: "PROADI + HMV", conteudo: "Texto sobre a parceria entre PROADI e o Hospital Moinhos de Vento.", tipo: "descricao" },
   /*4*/ { titulo: "Adm 1", conteudo: "Texto sobre as atividades administrativas relacionadas ao PROADI.", tipo: "descricao" },
@@ -25,11 +25,11 @@ const casas = [
   /*V*/ { titulo: "", conteudo: "", tipo: "" },
 
   // Casinhas de projeto (casinhaProjeto)
-  /*12*/ { titulo: "Projeto Gestão Hospitalar RS", conteudo: "Projeto que visa otimizar processos administrativos e assistenciais nos hospitais do Rio Grande do Sul.", tipo: "descricao" },
+  /*12*/ { titulo: "Projeto Gestão Hospitalar RS", conteudo: "Projeto que visa otimizar processos administrativos e assistenciais nos hospitais do Rio Grande do Sul.", tipo: "projeto" },
   /*13*/ { titulo: "?", pergunta: "O projeto Gestão Hospitalar RS é focado exclusivamente na gestão financeira de hospitais?", resposta: false, explicacao: "O projeto abrange aspectos administrativos e assistenciais, não apenas financeiros.", tipo: "pergunta" },
 
 
-  /*14*/ { titulo: "Projeto Lean", conteudo: "Projeto que aplica metodologias lean para reduzir desperdícios e melhorar a eficiência nos processos hospitalares.", tipo: "descricao" },
+  /*14*/ { titulo: "Projeto Lean", conteudo: "Projeto que aplica metodologias lean para reduzir desperdícios e melhorar a eficiência nos processos hospitalares.", tipo: "projeto" },
   /*15*/ { titulo: "?", pergunta: "O projeto LEANS é focado exclusivamente na gestão financeira de hospitais?", resposta: false, explicacao: "O projeto abrange aspectos administrativos e assistenciais, não apenas financeiros.", tipo: "pergunta" },
 
   /*16*/ { titulo: "Projeto RHP", conteudo: "Estudo sobre redes hospitalares e padrões de cuidado.", tipo: "descricao" },
@@ -176,11 +176,31 @@ document.querySelectorAll('.casa').forEach((casa, index) => {
       conteudoCarta.textContent = dadosCasa.conteudo;
       botoesPergunta.style.display = 'none';
       videoArea.style.display = 'none';
-    } else if (dadosCasa.tipo === 'pergunta') {
+      imagem.style.display = 'none';
+    } 
+
+    else if( dadosCasa.tipo === 'integrantes'){
+      tituloCarta.textContent = dadosCasa.titulo;
+      conteudoCarta.textContent = dadosCasa.conteudo;
+      botoesPergunta.style.display = 'none';
+      videoArea.style.display = 'none';
+      imagem.style.display = 'block';
+    }
+
+    else if(dadosCasa.tipo === 'projeto'){
+      tituloCarta.textContent = dadosCasa.titulo;
+      conteudoCarta.textContent = dadosCasa.conteudo;
+      botoesPergunta.style.display = 'none';
+      videoArea.style.display = 'block';
+      imagem.style.display = 'none';
+    }
+
+    else if (dadosCasa.tipo === 'pergunta') {
       tituloCarta.textContent = dadosCasa.titulo;
       conteudoCarta.textContent = dadosCasa.pergunta;
       botoesPergunta.style.display = 'block';
       videoArea.style.display = 'none';
+      imagem.style.display = 'none';
 
       // Configura os botões de verdadeiro/falso
       window.responder = (respostaUsuario) => {

@@ -7,10 +7,15 @@
   <link rel="stylesheet" href="/CSS/styles.css">
   <link rel="stylesheet" href="/CSS/telagrande.css">
   <script defer src="script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <div id="titulodiv">
-    <h1 id="tituloJOGO" >Jogo PROADI-SUS</h1>
+    <h1 id="tituloJOGO" >Trilha do conhecimento PROADI-SUS 2024/2026</h1>
   </div>
   <div class="trilha">
     
@@ -139,18 +144,33 @@
   </div>
 
   <div class="carta" id="carta">
-    <h2 id="titulo">Título</h2>
-    <p id="conteudo">Conteúdo aqui</p>
-    <div id="botoes-pergunta" style="display: none;">
-      <button onclick="responder(true)">Verdadeiro</button>
-      <button onclick="responder(false)">Falso</button>
+    <div id="fechar">
+      <h2 id="titulo">Título</h2>
+      <p id="conteudo">Conteúdo aqui</p>
+      <div id="imagem"style="display: none;">
+        
+          <img  class="fotointegrante" src="img/DafneRosto.png" alt="helen">
+          <img class="fotointegrante" src="img/VelmaRosto.png" alt="helen">
+          <img class="fotointegrante" src="img/ScoobyRosto.png" alt="helen">
+          <img  class="fotointegrante" src="img/SalsichaRosto.png" alt="helen">
+          <img  class="fotointegrante" src="img/MonstroRosto.png" alt="helen">
+          <img class="fotointegrante" src="img/Fredrosto.png" alt="helen">
+      </div>
+      
+      
+      <div id="botoes-pergunta" style="display: none;">
+        <h2>Tá certo isso?</h2>
+        <button onclick="responder(true)">Verdadeiro</button>
+        <button onclick="responder(false)">Falso</button>
+        <div id="resultado" class="resultado"></div>
+      </div>
+      <div id="video-area" style="display: none;">
+        <button>Asista ao vídeo</button>
+      </div>
+      <button class="fechar" onclick="fecharCarta()">Fechar</button>
     </div>
-    <div id="video-area" style="display: none;">
-      <button>Adicionar vídeo aqui</button>
-    </div>
-    <button class="fechar" onclick="fecharCarta()">Fechar</button>
   </div>
 
-  <div id="resultado" class="resultado"></div>
+  
 </body>
 </html>

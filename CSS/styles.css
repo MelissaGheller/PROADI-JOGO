@@ -11,10 +11,14 @@ body {
 }
 #tituloDiv{
   margin-top: 50px;
+  
+  
 }
 #tituloJOGO{
   color: #45a049;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  width: 90%;
 }
 
 .trilha {
@@ -87,24 +91,27 @@ body {
 
 .carta {
   position: fixed;
+  padding: 5px 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
   height: 60%;
-  background: white;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgb(255, 255, 255);
+  box-shadow: 1px 4px 8px rgb(176, 176, 176);
   border-radius: 10px;
   display: none;
   flex-direction: column;
   gap: 10px;
   z-index: 1000;
+  text-align: center;
+
 }
 
 .carta h2 {
-  margin: 0;
+  padding: 20px;
   font-size: 18px;
+
 }
 
 .carta p {
@@ -119,6 +126,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  margin: 10px;
 }
 
 .carta button:hover {
@@ -127,6 +135,11 @@ body {
 
 .carta .fechar {
   background-color: #666;
+  background-color: #000000;
+  position: absolute;
+  bottom: 10px; /* Distância do fundo da carta */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
 }
 
 .carta .fechar:hover {
@@ -135,15 +148,35 @@ body {
 
 .resultado {
   font-size: 18px;
-  font-weight: bold;
   margin-top: 20px;
   text-align: center;
 }
 
-.resultado.sucesso {
-  color: green;
+#fechar{
+  background-color: #80c3de;
+  height: 90%;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  
+  
 }
 
-.resultado.erro {
-  color: red;
+#imagem {
+  display: flex; /* Define o layout flexível */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  gap: 10px; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  width: 100%; /* Garante que o container ocupe toda a largura disponível */
+  padding: 10px; /* Espaçamento interno */
+}
+
+
+.fotointegrante {
+  grid-template-columns: repeat(5, 90px);
+
+  width: 70px; /* Define largura fixa para a imagem */
+  height: 70px; /* Mantém a proporção */
+  border-radius: 8px; /* Bordas arredondadas */
 }
