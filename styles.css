@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Thasadith", serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -7,7 +7,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #c5c9d8; /* Fundo atualizado */
+  background-color: #c5c9d8; 
 }
 
 #tituloDiv {
@@ -16,10 +16,20 @@ body {
 
 }
 
+#titulo {
+  font-size: 20px;
+}
+#conteudo{
+  font-size: 15px;
+  text-align: justify;
+
+}
+
 #tituloJOGO {
-  color: #000000; /* Cor do texto atualizada */
+  color: #000000; 
   font-family: "Oregano", serif;
   text-align: center;
+  font-size: 40px;
   width: 90%;
 }
 
@@ -32,7 +42,7 @@ body {
   align-items: center;
   margin: 0;
   margin-bottom: 30px;
-  color: #000000; /* Cor do texto */
+  color: #000000; 
 }
 
 .casa {
@@ -54,41 +64,40 @@ body {
 
 .casa:hover {
   transform: scale(1.1);
-  background-color: #4f5a68; /* Cor ao passar o mouse */
+  background-color: #4f5a68; 
 }
 
 .gestao {
-  background-color: #4f99b3; /* Nova cor */
+  background-color: #4f99b3; 
 }
 
 .educacao {
-  background-color: #7167a8; /* Nova cor */
+  background-color: #7167a8; 
 }
 
 .pesquisa {
-  background-color: #80c3de; /* Nova cor */
+  background-color: #80c3de; 
 }
 
 .saudeDigital {
-  background-color: #95bc4f; /* Nova cor */
+  background-color: #95bc4f; 
 }
 
 .casaVazia {
-  background-color: #c5c9d8; /* Nova cor */
+  background-color: #c5c9d8; 
   cursor: default;
 }
 
 .casaVazia:hover {
-  background-color: #c5c9d8; /* Mesmo fundo ao passar o mouse */
+  background-color: #c5c9d8; 
 }
 
 .casinha {
-  background-color: #80c3de; /* Nova cor */
+  background-color: #80c3de; 
   color: #000000;
 }
 
 .casinhaPergunta {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 40px;
 }
 
@@ -98,9 +107,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 80%;
+  border: solid 7px #ffffff;
   background: #ffffff; 
-  box-shadow: 1px 4px 8px #4f5a68; 
+  box-shadow: 5px 4px 8px #5e5e5e; 
   border-radius: 10px;
   display: none;
   flex-direction: column;
@@ -110,36 +120,37 @@ body {
 }
 
 .carta h2 {
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 16px;
 }
 
 .carta p {
   font-size: 12px;
-  padding: 10px;
 }
 
 .carta button {
   padding: 10px;
-  background-color: #7167a8; 
-  color: white;
-  border: none;
+  background-color: rgba(255, 255, 255, 0); 
+  border: solid 2px #7167a8;
+  color: #7167a8;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  margin: 10px;
+  width: 100px;
 }
 
 .carta button:hover {
-  background-color: #4f99b3; 
+  background-color: #7167a8; 
+  color: #ffffff;
 }
 
 .carta .fechar {
   background-color: #000000;
-  
-  
-  
-  max-width: 200px; /
+  border: none;
+  color: #ffffff;
+  width: 200px;
+  max-width: 200px; 
+  margin-top: 5px;
 }
 
 .carta .fechar:hover {
@@ -152,57 +163,67 @@ body {
   text-align: center;
 }
 
-#fechar {
-  background-color: #c5c9d8;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  border-radius: 10px;
+#video-area button{
+  width: 200px;
+  margin: 10px auto;
 }
 
-
-.fotointegrante {
-  width: 100%;
-  height: 50%;
-  border-radius: 8px;
-}
 
 #nomes {
   display: flex;
-  gap: 20px;
+  width: 100%;
   justify-content: flex-start;
   overflow-x: auto;
   white-space: nowrap;
-  margin: 20px;
+  margin: 20px auto;
 }
 
 #pessoa {
   display: inline-block;
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #ddd;
+  width: 60px;
+  height: 120px;
   border-radius: 8px;
   background-color: #c5c9d8; 
-  width: 30%;
-  height: 30%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2px;
+  padding: 10px;
 }
-
+.fotointegrante {
+  width: 100%;
+  height: 70px;
+  border-radius: 8px;
+}
 #pessoa h1 {
-  padding: 1px;
-  font-size: 10px;
+  padding: 2px;
+  font-size: 12px;
+  padding: 2px;
   word-wrap: normal;
-  background-color: #7167a8;
+  word-wrap: break-word; 
+  text-align: center; 
+  max-width: 90%; 
+  white-space: normal;
 
 }
 
 #pessoa p {
+  display: none;
   font-size: 8px;
-  background-color: pink;
+  margin: 0px;
+  padding: 2px;
   word-wrap: normal;
-  white-space: normal; /* Permite que o texto quebre normalmente */
   word-wrap: break-word; /* Quebra palavras muito longas */
   overflow-wrap: break-word; /* Quebra linhas longas corretamente */
   text-align: center; /* Centraliza o texto */
-  max-width: 100%; /* Garante que o parágrafo não ultrapasse o contêiner */
+  max-width: 90%; 
+}
+
+#resultado{
+  font-size: 12px;
+  text-align: justify;
+  margin: 10px;
+  padding: 10px;
+  color: #000000;
+  border-radius: 10px;
+
+
 }
