@@ -176,7 +176,8 @@ document.querySelectorAll('.casa').forEach((casa, index) => {
       conteudoCarta.textContent = dadosCasa.conteudo;
       botoesPergunta.style.display = 'none';
       videoArea.style.display = 'none';
-      imagem.style.display = 'none';
+      nomes.style.display = 'none';
+
     } 
 
     else if( dadosCasa.tipo === 'integrantes'){
@@ -184,7 +185,7 @@ document.querySelectorAll('.casa').forEach((casa, index) => {
       conteudoCarta.textContent = dadosCasa.conteudo;
       botoesPergunta.style.display = 'none';
       videoArea.style.display = 'none';
-      imagem.style.display = 'block';
+      nomes.style.display = 'block';
     }
 
     else if(dadosCasa.tipo === 'projeto'){
@@ -192,7 +193,7 @@ document.querySelectorAll('.casa').forEach((casa, index) => {
       conteudoCarta.textContent = dadosCasa.conteudo;
       botoesPergunta.style.display = 'none';
       videoArea.style.display = 'block';
-      imagem.style.display = 'none';
+      nomes.style.display = 'none';
     }
 
     else if (dadosCasa.tipo === 'pergunta') {
@@ -200,7 +201,8 @@ document.querySelectorAll('.casa').forEach((casa, index) => {
       conteudoCarta.textContent = dadosCasa.pergunta;
       botoesPergunta.style.display = 'block';
       videoArea.style.display = 'none';
-      imagem.style.display = 'none';
+      nomes.style.display = 'none';
+
 
       // Configura os botões de verdadeiro/falso
       window.responder = (respostaUsuario) => {

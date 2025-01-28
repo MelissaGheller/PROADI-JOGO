@@ -5,11 +5,6 @@
 
   #tituloJOGO{
     font-size: 100px;
-    margin: 50px;
-    padding: 10px;
-    color: #80c3de;
-    background-color: black;       
-    font-family: "Oregano", serif;
   } 
   .trilha{
     grid-template-columns: repeat(5, 230px);
@@ -73,6 +68,14 @@
     margin: 20px;
   
   }
+  .fotointegrante {
+    width: 100px; /* Define largura fixa para a imagem */
+    height:100px; /* Mantém a proporção */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin: 10px;
+  }
+
+  
   
 
 
