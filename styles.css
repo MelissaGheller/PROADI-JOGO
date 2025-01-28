@@ -10,27 +10,13 @@ body {
   background-color: #c5c9d8; 
 }
 
-#tituloDiv {
-  margin-top: 50px;
-  padding: 10px;
-
-}
-
-#titulo {
-  font-size: 20px;
-}
-#conteudo{
-  font-size: 15px;
-  text-align: justify;
-
-}
-
 #tituloJOGO {
   color: #000000; 
   font-family: "Oregano", serif;
   text-align: center;
   font-size: 40px;
-  width: 90%;
+  width: 70%;
+  margin: 50px auto 20px;
 }
 
 .trilha {
@@ -149,7 +135,6 @@ body {
   border: none;
   color: #ffffff;
   width: 200px;
-  max-width: 200px; 
   margin-top: 5px;
 }
 
@@ -163,10 +148,11 @@ body {
   text-align: center;
 }
 
-#video-area button{
-  width: 200px;
+#video-area video{
+  width: 250px;
   margin: 10px auto;
 }
+
 
 
 #nomes {

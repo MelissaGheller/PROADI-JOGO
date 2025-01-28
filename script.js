@@ -24,7 +24,6 @@ const casas = [
   /*V*/ { titulo: "", conteudo: "", tipo: "" },
   /*V*/ { titulo: "", conteudo: "", tipo: "" },
 
-  // Casinhas de projeto (casinhaProjeto)
   /*12*/ { titulo: "Projeto Gestão Hospitalar RS", conteudo: "Projeto que visa otimizar processos administrativos e assistenciais nos hospitais do Rio Grande do Sul.", tipo: "projeto" },
   /*13*/ { titulo: "Tá certo isso?", pergunta: "O projeto Gestão Hospitalar RS é focado exclusivamente na gestão financeira de hospitais?", resposta: false, explicacao: "O projeto abrange aspectos administrativos e assistenciais, não apenas financeiros.", tipo: "pergunta" },
 
@@ -204,7 +203,7 @@ document.querySelectorAll('.casa').forEach((casa, index) => {
       nomes.style.display = 'none';
 
 
-      // Configura os botões de verdadeiro/falso
+      // Verdadeiro/falso
       window.responder = (respostaUsuario) => {
         const resultado = document.getElementById('resultado');
         if (respostaUsuario === dadosCasa.resposta) {

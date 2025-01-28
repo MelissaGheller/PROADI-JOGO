@@ -5,60 +5,65 @@
 
   #tituloJOGO{
     font-size: 100px;
+    width: 1100px;
   } 
   .trilha{
-    grid-template-columns: repeat(5, 230px);
+    grid-template-columns: repeat(5, 270px);
     gap: 5px;
     justify-content: center;
     align-items: center;
   }
 
   .casa{
-    width: 200px;
-    height: 200px;
-    font-size: 35px;
-    margin: 10px;
+    width: 260px;
+    height: 250px;
+    font-size: 40px;
+    margin: 0.5px;
   }
   .casinhaPergunta{
-    font-size: 100px;
+    font-size: 150px;
   }
-
+  .carta{
+    width: 90%;
+    height: 90%;
+    text-align: center;    
+  }
   .carta h2 {
-    font-size: 30px;
+    font-size: 60px;
+    text-align: center;
+    margin: 20px;
   }
   
-  .carta p {
-    font-size: 20px;
+  #conteudo {
+    font-size: 40px;
+    width: 90%;
+    margin: 0px auto 20px;
+    text-align: center;
+  
   }
   
   .carta button {
-    padding: 10px;
-    background-color: #395b70;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
+    width: 700px;
+    font-size: 60px;
+   
+    
   }
-  
-  .carta button:hover {
-    background-color: #005A93;
+  #video-area video{
+    width: 60%;
+    margin: 0px auto;
+    font-size: 50px;
   }
   
   .carta .fechar {
-    background-color: #000000;
     position: absolute;
-    bottom: 10px; /* Distância do fundo da carta */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
+    bottom: 10px; 
+    transform: translateX(-50%); 
+    width: 600px;
+    font-size: 30px;
+  
 
   }
-  .fechar bottom{
-    background-attachment: fixed;
-    margin: 0px;
-    position: relative;
-    bottom: 0px;
-  }
+
   .carta .fechar:hover {
     background-color: #444;
   }
